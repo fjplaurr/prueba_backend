@@ -24,11 +24,6 @@ router.get('/', getPrueba());
 // Routes
 app.use('/api/users', router);
 
-// Error handling
-app.use((req, res, next) => {
-  const err = new Error('Not found');
-  next(err);
-});
 
 // Server listening
 const PORT = process.env.PORT || 5000;
